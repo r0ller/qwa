@@ -1,0 +1,33 @@
+QMAKE_CXX.QT_COMPILER_STDCXX = 201402L
+QMAKE_CXX.QMAKE_CLANG_MAJOR_VERSION = 9
+QMAKE_CXX.QMAKE_CLANG_MINOR_VERSION = 0
+QMAKE_CXX.QMAKE_CLANG_PATCH_VERSION = 8
+QMAKE_CXX.QMAKE_GCC_MAJOR_VERSION = 4
+QMAKE_CXX.QMAKE_GCC_MINOR_VERSION = 2
+QMAKE_CXX.QMAKE_GCC_PATCH_VERSION = 1
+QMAKE_CXX.COMPILER_MACROS = \
+    QT_COMPILER_STDCXX \
+    QMAKE_CLANG_MAJOR_VERSION \
+    QMAKE_CLANG_MINOR_VERSION \
+    QMAKE_CLANG_PATCH_VERSION \
+    QMAKE_GCC_MAJOR_VERSION \
+    QMAKE_GCC_MINOR_VERSION \
+    QMAKE_GCC_PATCH_VERSION
+QMAKE_CXX.INCDIRS = \
+    /home/r0ller/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/include/c++/4.9.x \
+    /home/r0ller/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/9.0.8/include \
+    /usr/include
+QMAKE_CXX.LIBDIRS = \
+    /home/r0ller/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/9.0.8 \
+    /home/r0ller/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/9.0.8/lib/linux/x86_64 \
+    /home/r0ller/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/x86_64-linux-android/4.9.x \
+    /home/r0ller/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/x86_64-linux-android/lib64 \
+    /home/r0ller/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/lib64 \
+    /home/r0ller/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/lib64 \
+    /lib64 \
+    /usr/lib64 \
+    /home/r0ller/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/x86_64-linux-android/lib \
+    /home/r0ller/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/lib \
+    /home/r0ller/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/lib \
+    /lib \
+    /usr/lib

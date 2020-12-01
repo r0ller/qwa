@@ -1,0 +1,1 @@
+/home/r0ller/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android23-clang++ receiver.cpp -Wl,-soname,libqwa_backend_arm64-v8a.so -shared -o ./libqwa_backend_arm64-v8a.so

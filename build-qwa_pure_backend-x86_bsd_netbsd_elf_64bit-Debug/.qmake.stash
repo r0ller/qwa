@@ -1,0 +1,24 @@
+QMAKE_CXX.QT_COMPILER_STDCXX = 201402L
+QMAKE_CXX.QMAKE_GCC_MAJOR_VERSION = 7
+QMAKE_CXX.QMAKE_GCC_MINOR_VERSION = 4
+QMAKE_CXX.QMAKE_GCC_PATCH_VERSION = 0
+QMAKE_CXX.COMPILER_MACROS = \
+    QT_COMPILER_STDCXX \
+    QMAKE_GCC_MAJOR_VERSION \
+    QMAKE_GCC_MINOR_VERSION \
+    QMAKE_GCC_PATCH_VERSION
+QMAKE_CXX.INCDIRS = \
+    /usr/pkg/include \
+    /usr/include/krb5 \
+    /usr/pkg/lib/dbus-1.0/include/dbus \
+    /usr/pkg/include/glib-2.0 \
+    /usr/pkg/include/gio-unix-2.0 \
+    /usr/pkg/lib/glib-2.0/include \
+    /usr/X11R7/include/freetype2 \
+    /usr/X11R7/include \
+    /usr/X11R7/include/libdrm \
+    /usr/include/g++ \
+    /usr/include/g++/backward \
+    /usr/include/gcc-7 \
+    /usr/include
+QMAKE_CXX.LIBDIRS = /usr/lib
