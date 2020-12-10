@@ -2,10 +2,10 @@
 #include <QQmlApplicationEngine>
 #include <QQuickView>
 #include <QQmlContext>
-#if !defined(__ANDROID__) && !defined(__EMSCRIPTEN__)
+#ifdef __NATIVE__
 #include "receiver.h"
 #endif
-#if defined(__ANDROID__) || defined(__EMSCRIPTEN__)
+#if defined(__ANDROID__) || defined(__NODEJS__)
 #include <emscripten.h>
 #endif
 #include "messageboard.h"

@@ -1293,11 +1293,11 @@ function updateGlobalBufferAndViews(buf) {
 }
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 9798992,
+    STACK_BASE = 9799056,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 4556112,
-    DYNAMIC_BASE = 9798992,
-    DYNAMICTOP_PTR = 4555936;
+    STACK_MAX = 4556176,
+    DYNAMIC_BASE = 9799056,
+    DYNAMICTOP_PTR = 4556000;
 
 assert(STACK_BASE % 16 === 0, 'stack must start aligned');
 assert(DYNAMIC_BASE % 16 === 0, 'heap must start aligned');
@@ -1826,8 +1826,8 @@ var tempI64;
 
 var ASM_CONSTS = {
   1033: function($0) {window.onmessage=function(e){ window.msgPort=e.ports[0]; window.msgPort.onmessage=function(f){ dynCall('vi',$0,[allocate(intArrayFromString(f.data),'i8',ALLOC_NORMAL)]); } }},  
- 1388: function($0) {window.msgPort.postMessage(UTF8ToString($0));},  
- 1440: function() {console.log('Refresh');}
+ 1391: function($0) {window.msgPort.postMessage(UTF8ToString($0));},  
+ 1443: function() {console.log('Refresh');}
 };
 
 function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
@@ -1837,7 +1837,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
 
 
 
-// STATICTOP = STATIC_BASE + 4555088;
+// STATICTOP = STATIC_BASE + 4555152;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -8306,7 +8306,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
     }
 
   function _emscripten_get_sbrk_ptr() {
-      return 4555936;
+      return 4556000;
     }
 
   
@@ -12532,7 +12532,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   }
   
   
-  var _fetch_work_queue=4556096;function __emscripten_get_fetch_work_queue() {
+  var _fetch_work_queue=4556160;function __emscripten_get_fetch_work_queue() {
       return _fetch_work_queue;
     }function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
     if (typeof noExitRuntime !== 'undefined') noExitRuntime = true; // If we are the main Emscripten runtime, we should not be closing down.
@@ -13150,10 +13150,10 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
     }
 
   
-  var ___tm_current=4555952;
+  var ___tm_current=4556016;
   
   
-  var ___tm_timezone=(stringToUTF8("GMT", 4556000, 4), 4556000);
+  var ___tm_timezone=(stringToUTF8("GMT", 4556064, 4), 4556064);
   
   function _tzset() {
       // TODO: Use (malleable) environment variables instead of system settings.

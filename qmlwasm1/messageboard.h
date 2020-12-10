@@ -2,7 +2,7 @@
 #define MESSAGEBOARD_H
 #include <QObject>
 #include <QDebug>
-#if defined(__ANDROID__) || defined(__EMSCRIPTEN__)
+#if defined(__ANDROID__) || defined(__NODEJS__)
 #include <emscripten.h>
 #endif
 

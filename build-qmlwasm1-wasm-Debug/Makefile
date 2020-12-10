@@ -14,7 +14,7 @@ EQ            = =
 
 CC            = emcc
 CXX           = em++
-DEFINES       = -D__ANDROID__ -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
+DEFINES       = -D__NODEJS__ -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -s ALLOW_MEMORY_GROWTH=1 -Wall -Wextra $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -s ALLOW_MEMORY_GROWTH=1 -Wall -Wextra $(DEFINES)
 INCPATH       = -I../qmlwasm1 -I. -I../../qt5/qtbase/include -I../../qt5/qtbase/include/QtQuick -I../../qt5/qtbase/include/QtGui -I../../qt5/qtbase/include/QtQmlModels -I../../qt5/qtbase/include/QtQml -I../../qt5/qtbase/include/QtNetwork -I../../qt5/qtbase/include/QtCore -I. -I/home/r0ller/.emscripten_ports/openssl/include -I../../qt5/qtbase/mkspecs/wasm-emscripten
@@ -884,9 +884,6 @@ main.o: ../qmlwasm1/main.cpp ../../qt5/qtbase/include/QtGui/QGuiApplication \
 		../../qt5/qtbase/include/QtQml/QQmlContext \
 		../../qt5/qtbase/include/QtQml/qqmlcontext.h \
 		../../qt5/qtdeclarative/src/qml/qml/qqmlcontext.h \
-		../../qt5/qtbase/include/QtCore/QLibrary \
-		../../qt5/qtbase/include/QtCore/qlibrary.h \
-		../../qt5/qtbase/src/corelib/plugin/qlibrary.h \
 		../qmlwasm1/messageboard.h \
 		../../qt5/qtbase/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../qmlwasm1/main.cpp

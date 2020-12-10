@@ -14,7 +14,7 @@ EQ            = =
 
 CC            = gcc
 CXX           = c++
-DEFINES      += -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
+DEFINES      += -D__NATIVE__ -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS       += -O2 -Wno-register -D_FORTIFY_SOURCE=2 -D_NETBSD_SOURCE -I/usr/pkg/include -I/usr/include -I/usr/include/krb5 -I/usr/pkg/lib/dbus-1.0/include/dbus -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include/freetype2 -I/usr/X11R7/include -I/usr/X11R7/include/libdrm -g -Wall -Wextra -fPIC $(DEFINES)
 CXXFLAGS     += -O2 -Wno-register -D_FORTIFY_SOURCE=2 -D_NETBSD_SOURCE -I/usr/pkg/include -I/usr/include -I/usr/include/krb5 -I/usr/pkg/lib/dbus-1.0/include/dbus -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include/freetype2 -I/usr/X11R7/include -I/usr/X11R7/include/libdrm -g -std=gnu++11 -Wall -Wextra -fPIC $(DEFINES)
 INCPATH      += -I../qmlwasm1 -I. -I../qwa_pure_backend -I/usr/pkg/qt5/include -I/usr/pkg/qt5/include/QtQuick -I/usr/pkg/qt5/include/QtGui -I/usr/pkg/qt5/include/QtQmlModels -I/usr/pkg/qt5/include/QtQml -I/usr/pkg/qt5/include/QtNetwork -I/usr/pkg/qt5/include/QtCore -I. -isystem /usr/X11R7/include -isystem /usr/X11R7/include/libdrm -isystem /usr/pkg/include -I/usr/pkg/qt5/mkspecs/netbsd-g++

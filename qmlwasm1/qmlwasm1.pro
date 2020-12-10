@@ -1,7 +1,13 @@
 QT += quick
-#Uncomment to compile WASM for Android (NOT for native Android build)
+#__ANDROID__ is NOT for native Android build but to build webassembly qml for the android webview
 #TODO: determine automatically based on target
 #DEFINES +=__ANDROID__
+DEFINES +=__NODEJS__
+#DEFINES +=__NATIVE__
+#Uncomment for __NATIVE__ build:
+#DEPENDPATH += . ../build-qwa_pure_backend-x86_bsd_netbsd_elf_64bit-Debug
+#LIBS += -L../build-qwa_pure_backend-x86_bsd_netbsd_elf_64bit-Debug -lqwa_pure_backend
+#INCLUDEPATH += /home/r0ller/qwa/qwa_pure_backend
 
 CONFIG += c++11
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -27,8 +33,3 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     messageboard.h
-
-#Uncomment for native build
-DEPENDPATH += . ../build-qwa_pure_backend-x86_bsd_netbsd_elf_64bit-Debug
-LIBS += -L../build-qwa_pure_backend-x86_bsd_netbsd_elf_64bit-Debug -lqwa_pure_backend
-INCLUDEPATH += /home/r0ller/qwa/qwa_pure_backend
