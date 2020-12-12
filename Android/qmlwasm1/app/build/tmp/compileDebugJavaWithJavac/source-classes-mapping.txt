@@ -1,0 +1,10 @@
+com/bitroller/qmlwasm1/jsi.java
+ com.bitroller.qmlwasm1.jsi
+ com.bitroller.qmlwasm1.jsi$1OneShotTask
+com/bitroller/qmlwasm1/BuildConfig.java
+ com.bitroller.qmlwasm1.BuildConfig
+com/bitroller/qmlwasm1/MainActivity.java
+ com.bitroller.qmlwasm1.MainActivity
+ com.bitroller.qmlwasm1.MainActivity$1
+ com.bitroller.qmlwasm1.MainActivity$1$1
+ com.bitroller.qmlwasm1.MainActivity$2
