@@ -22,10 +22,21 @@ Window {
         color: "black"
     }
 
+    Rectangle {
+        id: rect1
+        width: 50
+        height: 50
+        color: "red"
+        Behavior on x { SpringAnimation { spring: 2; damping: 0.2 } }
+        Behavior on y { SpringAnimation { spring: 2; damping: 0.2 } }
+    }
+
     MouseArea {
         objectName: "mousearea"
         anchors.fill: parent
         onClicked: {
+            rect1.x = mouse.x - rect1.width/2;
+            rect1.y = mouse.y - rect1.height/2;
             msgBoard.postMessage("Hello from QML");
             //msgBoard.refresh();
         }
