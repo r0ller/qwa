@@ -6,14 +6,14 @@ QT += quick
 DEFINES +=__NATIVE__
 
 #Uncomment for __NATIVE__ build targeting DESKTOP:
-DEPENDPATH += . ../build-qwa_pure_backend-x86_bsd_netbsd_elf_64bit-Debug
-LIBS += -L../build-qwa_pure_backend-x86_bsd_netbsd_elf_64bit-Debug -lqwa_pure_backend
-INCLUDEPATH += ../qwa_pure_backend
+#DEPENDPATH += . ../build-qwa_pure_backend-x86_bsd_netbsd_elf_64bit-Debug
+#LIBS += -L../build-qwa_pure_backend-x86_bsd_netbsd_elf_64bit-Debug -lqwa_pure_backend
+#INCLUDEPATH += ../qwa_pure_backend
 
 #Uncomment for __NATIVE__ build targeting BROWSER:
-#DEPENDPATH += . ../build-qwa_pure_backend-wasm-Debug
-#LIBS += -L../build-qwa_pure_backend-wasm-Debug -lqwa_pure_backend
-#INCLUDEPATH += ../qwa_pure_backend
+DEPENDPATH += . ../build-qwa_pure_backend-wasm-Debug
+LIBS += -L../build-qwa_pure_backend-wasm-Debug -lqwa_pure_backend
+INCLUDEPATH += ../qwa_pure_backend
 
 CONFIG += c++11
 # You can make your code fail to compile if it uses deprecated APIs.
