@@ -24,7 +24,7 @@
   <body onload="init()">
     <figure style="overflow:visible;" id="qtspinner">
       <center style="margin-top:1.5em; line-height:150%">
-        <img src="qtlogo.svg" width="320" height="200" style="display:block"></img>
+        <img src="build-qmlwasm1-wasm-Debug/qtlogo.svg" width="320" height="200" style="display:block"></img>
         <strong>Qt for WebAssembly: qmlwasm1</strong>
         <div id="qtstatus"></div>
         <noscript>JavaScript is disabled. Please enable JavaScript to use this application.</noscript>
@@ -64,7 +64,7 @@
                   canvas.style.display = 'block';
               },
           });
-          qtLoader.loadEmscriptenModule("build-qmlwasm1-wasm-Debug/qmlwasm1");
+          qtLoader.loadEmscriptenModule("build-qmlwasm1-wasm-Debug/qmlwasm1.wasm");
       }
     </script>
     <script type="text/javascript" src="build-qmlwasm1-wasm-Debug/qtloader.js"></script>
