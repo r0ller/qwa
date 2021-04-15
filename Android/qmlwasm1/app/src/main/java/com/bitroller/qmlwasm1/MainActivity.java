@@ -24,7 +24,7 @@ import java.io.UnsupportedEncodingException;
 public class MainActivity extends AppCompatActivity {
     private native byte[] callBackend(String command);
     private WebView mWebView;
-    private jsi jsi=null;
+    private boolean qmlInitDone=false;
     private static Context context;
     private WebMessagePort port;
 
@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebChromeClient(new WebChromeClient(){
             public boolean onConsoleMessage(ConsoleMessage cm) {
-                if(cm.message().contentEquals("qml: qmlwasm1")&&jsi==null){
-                    jsi = new jsi(context);
+                if(cm.message().contentEquals("qml: qmlwasm1")&&qmlInitDone==false){
+                    qmlInitDone = true;
                     final WebMessagePort[] channel=mWebView.createWebMessageChannel();
 
                     port=channel[0];
