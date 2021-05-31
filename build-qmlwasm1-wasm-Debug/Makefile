@@ -14,10 +14,10 @@ EQ            = =
 
 CC            = emcc
 CXX           = em++
-DEFINES       = -D__NATIVE__ -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
+DEFINES       = -D__NODEJS__ -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -s ALLOW_MEMORY_GROWTH=1 -Wall -Wextra $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -s ALLOW_MEMORY_GROWTH=1 -Wall -Wextra $(DEFINES)
-INCPATH       = -I../qmlwasm1 -I. -I../qwa_pure_backend -I../../qt5/qtbase/include -I../../qt5/qtbase/include/QtQuick -I../../qt5/qtbase/include/QtGui -I../../qt5/qtbase/include/QtQmlModels -I../../qt5/qtbase/include/QtQml -I../../qt5/qtbase/include/QtNetwork -I../../qt5/qtbase/include/QtCore -I. -I/home/r0ller/.emscripten_ports/openssl/include -I../../qt5/qtbase/mkspecs/wasm-emscripten
+INCPATH       = -I../qmlwasm1 -I. -I../../qt5/qtbase/include -I../../qt5/qtbase/include/QtQuick -I../../qt5/qtbase/include/QtGui -I../../qt5/qtbase/include/QtQmlModels -I../../qt5/qtbase/include/QtQml -I../../qt5/qtbase/include/QtNetwork -I../../qt5/qtbase/include/QtCore -I. -I/home/r0ller/.emscripten_ports/openssl/include -I../../qt5/qtbase/mkspecs/wasm-emscripten
 QMAKE         = /home/r0ller/qt5/qtbase/qmake/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -40,7 +40,7 @@ DISTNAME      = qmlwasm1.js1.0.0
 DISTDIR = /home/r0ller/qwa/build-qmlwasm1-wasm-Debug/.tmp/qmlwasm1.js1.0.0
 LINK          = em++
 LFLAGS        = -s WASM=1 -s FULL_ES2=1 -s FULL_ES3=1 -s USE_WEBGL2=1 -s EXIT_RUNTIME=1 -s ERROR_ON_UNDEFINED_SYMBOLS=1 -s EXTRA_EXPORTED_RUNTIME_METHODS=["UTF16ToString","stringToUTF16"] --bind -s FETCH=1 -g4 -s WASM=1 -s FULL_ES2=1 -s FULL_ES3=1 -s USE_WEBGL2=1 -s EXIT_RUNTIME=1 -s ERROR_ON_UNDEFINED_SYMBOLS=1 -s EXTRA_EXPORTED_RUNTIME_METHODS=["UTF16ToString","stringToUTF16"] --bind -s FETCH=1 -s ASSERTIONS=2 -s DEMANGLE_SUPPORT=1 -s GL_DEBUG=1 --profiling-funcs -s ALLOW_MEMORY_GROWTH=1 /home/r0ller/qt5/qtbase/lib/libqtfreetype.a /home/r0ller/qt5/qtbase/lib/libqtlibpng.a --source-map-base http://localhost:8000/
-LIBS          = $(SUBLIBS) -L../build-qwa_pure_backend-wasm-Debug -lqwa_pure_backend /home/r0ller/qt5/qtbase/plugins/platforms/libqwasm.a /home/r0ller/qt5/qtbase/lib/libQt5EventDispatcherSupport.a /home/r0ller/qt5/qtbase/lib/libQt5FontDatabaseSupport.a /home/r0ller/qt5/qtbase/lib/libqtfreetype.a /home/r0ller/qt5/qtbase/lib/libQt5EglSupport.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqgif.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqicns.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqico.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqjpeg.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqtga.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqtiff.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqwbmp.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqwebp.a /home/r0ller/qt5/qtbase/qml/QtQuick.2/libqtquick2plugin.a /home/r0ller/qt5/qtbase/qml/QtQuick/Window.2/libwindowplugin.a /home/r0ller/qt5/qtbase/lib/libQt5Quick.a /home/r0ller/qt5/qtbase/lib/libQt5Gui.a /home/r0ller/qt5/qtbase/lib/libqtlibpng.a /home/r0ller/qt5/qtbase/lib/libqtharfbuzz.a /home/r0ller/qt5/qtbase/qml/QtQml/libqmlplugin.a /home/r0ller/qt5/qtbase/qml/QtQml/Models.2/libmodelsplugin.a /home/r0ller/qt5/qtbase/lib/libQt5QmlModels.a /home/r0ller/qt5/qtbase/lib/libQt5Qml.a /home/r0ller/qt5/qtbase/lib/libQt5Network.a /home/r0ller/qt5/qtbase/lib/libQt5Core.a /home/r0ller/qt5/qtbase/lib/libqtpcre2.a   
+LIBS          = $(SUBLIBS) /home/r0ller/qt5/qtbase/plugins/platforms/libqwasm.a /home/r0ller/qt5/qtbase/lib/libQt5EventDispatcherSupport.a /home/r0ller/qt5/qtbase/lib/libQt5FontDatabaseSupport.a /home/r0ller/qt5/qtbase/lib/libqtfreetype.a /home/r0ller/qt5/qtbase/lib/libQt5EglSupport.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqgif.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqicns.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqico.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqjpeg.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqtga.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqtiff.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqwbmp.a /home/r0ller/qt5/qtbase/plugins/imageformats/libqwebp.a /home/r0ller/qt5/qtbase/qml/QtQuick.2/libqtquick2plugin.a /home/r0ller/qt5/qtbase/qml/QtQuick/Window.2/libwindowplugin.a /home/r0ller/qt5/qtbase/lib/libQt5Quick.a /home/r0ller/qt5/qtbase/lib/libQt5Gui.a /home/r0ller/qt5/qtbase/lib/libqtlibpng.a /home/r0ller/qt5/qtbase/lib/libqtharfbuzz.a /home/r0ller/qt5/qtbase/qml/QtQml/libqmlplugin.a /home/r0ller/qt5/qtbase/qml/QtQml/Models.2/libmodelsplugin.a /home/r0ller/qt5/qtbase/lib/libQt5QmlModels.a /home/r0ller/qt5/qtbase/lib/libQt5Qml.a /home/r0ller/qt5/qtbase/lib/libQt5Network.a /home/r0ller/qt5/qtbase/lib/libQt5Core.a /home/r0ller/qt5/qtbase/lib/libqtpcre2.a   
 AR            = emar cqs
 RANLIB        = 
 SED           = sed
@@ -625,7 +625,7 @@ moc_messageboard.cpp: ../qmlwasm1/messageboard.h \
 		../../qt5/qtbase/src/corelib/tools/qsharedpointer_impl.h \
 		moc_predefs.h \
 		../../qt5/qtbase/bin/moc
-	/home/r0ller/qt5/qtbase/bin/moc $(DEFINES) --include /home/r0ller/qwa/build-qmlwasm1-wasm-Debug/moc_predefs.h -I/home/r0ller/qt5/qtbase/mkspecs/wasm-emscripten -I/home/r0ller/qwa/qmlwasm1 -I/home/r0ller/qwa/qwa_pure_backend -I/home/r0ller/qt5/qtbase/include -I/home/r0ller/qt5/qtbase/include/QtQuick -I/home/r0ller/qt5/qtbase/include/QtGui -I/home/r0ller/qt5/qtbase/include/QtQmlModels -I/home/r0ller/qt5/qtbase/include/QtQml -I/home/r0ller/qt5/qtbase/include/QtNetwork -I/home/r0ller/qt5/qtbase/include/QtCore -I. ../qmlwasm1/messageboard.h -o moc_messageboard.cpp
+	/home/r0ller/qt5/qtbase/bin/moc $(DEFINES) --include /home/r0ller/qwa/build-qmlwasm1-wasm-Debug/moc_predefs.h -I/home/r0ller/qt5/qtbase/mkspecs/wasm-emscripten -I/home/r0ller/qwa/qmlwasm1 -I/home/r0ller/qt5/qtbase/include -I/home/r0ller/qt5/qtbase/include/QtQuick -I/home/r0ller/qt5/qtbase/include/QtGui -I/home/r0ller/qt5/qtbase/include/QtQmlModels -I/home/r0ller/qt5/qtbase/include/QtQml -I/home/r0ller/qt5/qtbase/include/QtNetwork -I/home/r0ller/qt5/qtbase/include/QtCore -I. ../qmlwasm1/messageboard.h -o moc_messageboard.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -921,7 +921,6 @@ main.o: ../qmlwasm1/main.cpp ../../qt5/qtbase/include/QtGui/QGuiApplication \
 		../../qt5/qtbase/include/QtQml/QQmlContext \
 		../../qt5/qtbase/include/QtQml/qqmlcontext.h \
 		../../qt5/qtdeclarative/src/qml/qml/qqmlcontext.h \
-		../qwa_pure_backend/receiver.h \
 		../qmlwasm1/messageboard.h \
 		../../qt5/qtbase/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../qmlwasm1/main.cpp
@@ -1056,8 +1055,7 @@ messageboard.o: ../qmlwasm1/messageboard.cpp ../qmlwasm1/messageboard.h \
 		../../qt5/qtbase/include/QtCore/qsharedpointer.h \
 		../../qt5/qtbase/src/corelib/tools/qsharedpointer.h \
 		../../qt5/qtbase/include/QtCore/qsharedpointer_impl.h \
-		../../qt5/qtbase/src/corelib/tools/qsharedpointer_impl.h \
-		../qwa_pure_backend/receiver.h
+		../../qt5/qtbase/src/corelib/tools/qsharedpointer_impl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o messageboard.o ../qmlwasm1/messageboard.cpp
 
 qmlwasm1.js_plugin_import.o: /home/r0ller/qwa/build-qmlwasm1-wasm-Debug/qmlwasm1.js_plugin_import.cpp 
@@ -1085,7 +1083,7 @@ uninstall_target: FORCE
 
 install_js_file: first FORCE
 	@test -d $(INSTALL_ROOT)/opt/qmlwasm1/bin || mkdir -p $(INSTALL_ROOT)/opt/qmlwasm1/bin
-	$(QINSTALL_PROGRAM) /home/r0ller/qwa/qmlwasm1/qmlwasm1.js $(INSTALL_ROOT)/opt/qmlwasm1/bin/qmlwasm1.js
+	$(QINSTALL) /home/r0ller/qwa/build-qmlwasm1-wasm-Debug/qmlwasm1.js $(INSTALL_ROOT)/opt/qmlwasm1/bin/qmlwasm1.js
 
 uninstall_js_file: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/opt/qmlwasm1/bin/qmlwasm1.js
